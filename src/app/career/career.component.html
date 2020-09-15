@@ -1,0 +1,88 @@
+<div class="centerContent">
+    <div class="gridContent">
+        <div class="row">
+            <div class="col-sm-4 listContent">
+                <h2><b>OPEN OPPORTUNITIES</b></h2>
+                <ul>
+                    <li><button mat-button (click)="displayDeveloperfn()">MEAN Stack Developer</button></li>
+                </ul>
+                <ul *ngIf='displayDeveloper'>
+                    Job Category : Developer <br><br>
+                    Schedule : Full-Time/Intern/Part-Time <br> 
+                    <button mat-button (click)="displayFormfn()">APPLY</button>
+                </ul>
+            </div>
+            <div *ngIf='displayForm' class="col-sm-6 offset-sm-1 formContent">
+                <h2><b>Fill Your Details</b></h2>
+                <form [formGroup]="careerForm">
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper" >
+                            <mat-label>First Name:</mat-label>
+                            <input matInput required formControlName="fname">
+                            <mat-error *ngIf="career.fname.errors?.pattern && careerForm.controls['fname'].touched" style="color: red;">Enter the valid format</mat-error>
+                            <mat-error *ngIf="career.fname.errors?.required && careerForm.controls['fname'].touched" style="color: red;">This Field is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper">
+                            <mat-label>Last Name:</mat-label>
+                            <input matInput formControlName="lname">
+                            <mat-error *ngIf="career.lname.errors?.pattern && careerForm.controls['lname'].touched" style="color: red;">Enter the valid format</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper">
+                            <mat-label>Email:</mat-label>
+                            <input matInput required formControlName="email">
+                            <mat-error *ngIf="career.email.errors?.email && careerForm.controls['email'].touched" style="color: red;">Enter the valid format</mat-error>
+                            <mat-error *ngIf="career.email.errors?.required && careerForm.controls['email'].touched" style="color: red;">This Field is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper">
+                            <mat-label>Phone Number:</mat-label>
+                            <span matPrefix>+91 &nbsp;</span>
+                            <input matInput required formControlName="phoneNumber">
+                            <mat-error *ngIf="career.phoneNumber.errors?.pattern && careerForm.controls['phoneNumber'].touched" style="color: red;">Enter the valid format</mat-error>
+                            <mat-error *ngIf="career.phoneNumber.errors?.required && careerForm.controls['phoneNumber'].touched" style="color: red;">This Field is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper">
+                            <mat-label>State:</mat-label>
+                            <input matInput required formControlName="state">
+                            <mat-error *ngIf="career.state.errors?.pattern && careerForm.controls['state'].touched" style="color: red;">Enter the valid format</mat-error>
+                            <mat-error *ngIf="career.state.errors?.required && careerForm.controls['state'].touched" style="color: red;">This Field is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper" >
+                            <mat-label>City:</mat-label>
+                            <input matInput required formControlName="city">
+                            <mat-error *ngIf="career.city.errors?.pattern && careerForm.controls['city'].touched" style="color: red;">Enter the valid format</mat-error>
+                            <mat-error *ngIf="career.city.errors?.required && careerForm.controls['city'].touched" style="color: red;">This Field is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="mat-input-wrapper">
+                            <mat-label>Zip Code:</mat-label>
+                            <input matInput required formControlName="zip">
+                            <mat-error *ngIf="career.zip.errors?.pattern && careerForm.controls['zip'].touched" style="color: red;">Enter the valid format</mat-error>
+                            <mat-error *ngIf="career.zip.errors?.required && careerForm.controls['zip'].touched" style="color: red;">This Field is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <label for="file">Upload Resume:</label>                          
+                        <input type="file">                        
+                    </div>
+                    <button mat-button (click)='careerFormsubmit("Submitted")'>SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron banner">
+        <h1> Choose a Job you love, and you will never have to work a day in your life.</h1>
+        
+    </div>
+    <app-navbar-bottom></app-navbar-bottom>
+</div>

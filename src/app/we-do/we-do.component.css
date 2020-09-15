@@ -1,0 +1,54 @@
+.centerContent{
+    width: 100%;
+    background-image: url('./../../assets/Images/we-do.jpg');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+.totalGrid{
+    width: 99%;
+}
+.firstGrid{
+    width: 90%!important;
+    margin-left: 10%;
+    margin-top: 5%;   
+}
+
+h2{
+    color: midnightblue;
+    text-align: center;
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header{
+    margin-right:15%;
+}
+
+
+
+.lineHeight{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.Text{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner{
+    width: 75%;
+    margin-left: 15%;
+    text-align: center;
+    background-color: midnightblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
