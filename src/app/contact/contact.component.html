@@ -1,0 +1,62 @@
+<div class="centerContent">
+    <img src="./../../assets/Images/contact-us-bg.png" width="80%" id="contactUsimg" alt="contact-us">
+    <div class="row gridContent">
+        <div class="col-sm 3">
+          <h2><b>Our Location</b></h2><br>
+          <span>MakeinBITS Techno Solutions Ltd.<br><br>
+            For general inquiries, please contact by using the form on this page. We’d love to hear from you!</span>
+        </div>
+        <div class="col-sm-4 offset-sm-2">
+            <h2><b>Let's Work Together</b></h2>
+            <form [formGroup]="contactForm">
+                <div class="row">
+                    <mat-form-field class="mat-input-wrapper" >
+                        <mat-label>Name:</mat-label>
+                        <input matInput required formControlName="name">
+                        <mat-error *ngIf="contact.name.errors?.pattern && contactForm.controls['name'].touched" style="color: red;">Enter the valid format</mat-error>
+                        <mat-error *ngIf="contact.name.errors?.required && contactForm.controls['name'].touched" style="color: red;">This Field is Required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="mat-input-wrapper">
+                        <mat-label>Email:</mat-label>
+                        <input matInput required formControlName="email">
+                        <mat-error *ngIf="contact.name.errors?.required && contactForm.controls['email'].touched" style="color: red;">This Field is Required</mat-error>
+                        <mat-error *ngIf="contact.email.errors?.email && contactForm.controls['email'].touched" style="color: red;">Enter the valid format</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="mat-input-wrapper">
+                        <mat-label>About Yourself:</mat-label>
+                        <textarea matInput required rows="5" formControlName="textarea"></textarea>
+                        <mat-error *ngIf="contact.textarea.errors?.pattern && contactForm.controls['textarea'].touched" style="color: red;">Enter the valid format</mat-error>
+                        <mat-error *ngIf="contact.textarea.errors?.required && contactForm.controls['textarea'].touched" style="color: red;">This Field is Required</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <button mat-button id="contact" (click)='contactFormsubmit("Submitted")'>Contact Us</button>
+                </div>    
+            </form>
+           
+
+        </div>
+        <div class ="col-sm-3 contactCOntent">
+            <h2><b>Contact</b></h2> 
+            <span class="material-icons contactIcons">
+                email
+            </span>
+            <span class="material-icons contactIcons">
+                phone
+            </span> 
+            <span class="material-icons contactIcons">
+                facebook
+            </span>
+        </div>
+        
+    </div>
+    <div class="jumbotron banner">
+        <h1> You can reach us out at anytime</h1>
+        
+      </div>
+    <app-navbar-bottom></app-navbar-bottom>
+</div>

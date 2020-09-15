@@ -1,0 +1,13 @@
+li{
+    display: inline;
+}
+
+button{
+    color: white;
+    font-size: large;
+    outline: none;
+}
+
+#copyRights{
+    color: white;       
+}

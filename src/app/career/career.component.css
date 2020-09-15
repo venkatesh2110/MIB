@@ -1,0 +1,48 @@
+.centerContent{
+    width: 100%;
+    background-image: url('./../../assets/Images/career.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gridContent{
+    width: 99%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.listContent{
+    margin-left: 5%;
+    padding-top: 5%;
+}
+
+h2{
+    color: midnightblue;
+    margin-bottom: 5%;
+}
+
+button{
+    margin-top: 5%;
+    background-color: black;
+    color: white;
+}
+
+.banner{
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: center;
+    background-color: midnightblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+::ng-deep .mat-input-wrapper{
+    width:250px !important;
+    height: 70px !important;
+}
+
+.formContent{
+    padding-top: 5%;
+}
