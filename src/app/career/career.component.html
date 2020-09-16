@@ -71,10 +71,6 @@
                             <mat-error *ngIf="career.zip.errors?.required && careerForm.controls['zip'].touched" style="color: red;">This Field is Required</mat-error>
                         </mat-form-field>
                     </div>
-                    <div class="row">
-                        <label for="file">Upload Resume:</label>                          
-                        <input type="file">                        
-                    </div>
                     <button mat-button (click)='careerFormsubmit("Submitted")'>SUBMIT</button>
                 </form>
             </div>
